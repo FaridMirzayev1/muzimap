@@ -1,4 +1,4 @@
-// Footer.jsx (alternative without react-icons)
+import { Link } from "react-router-dom";
 import React from "react";
 import "./Footer.css";
 
@@ -37,16 +37,16 @@ const Footer = () => {
           <h4>Navigation</h4>
           <ul>
             <li>
-              <a href="./">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/aboutus">About Us</a>
+              <Link to="/aboutus">About Us</Link>
             </li>
             <li>
-              <a href="/contact">Contact Us</a>
+              <Link to="/contact">Contact Us</Link>
             </li>
             <li>
-              <a href="/premium">Go Premium</a>
+              <Link to="/premium">Go Premium</Link>
             </li>
           </ul>
         </div>
