@@ -18,7 +18,7 @@ export default function App() {
   }, []);
 
   return (
-    <Router>
+  
       <div>
         <Header />
         <Routes>
@@ -30,6 +30,6 @@ export default function App() {
         </Routes>
         <Footer />
       </div>
-    </Router>
+
   );
 }
