@@ -1,0 +1,264 @@
+.horizontal-tracks-container {
+  width: 96vw;
+  padding: 20px;
+  background: linear-gradient(to right, #1a1a2e, #16213e);
+  border-radius: 10px;
+  margin: 20px 0 20px 10px;
+}
+
+.tracks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.tracks-header h2 {
+  color: #4cc9f0;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.view-all-button {
+  background: transparent;
+  color: #4cc9f0;
+  border: 1px solid #4cc9f0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-all-button:hover {
+  background: rgba(76, 201, 240, 0.1);
+}
+
+.tracks-scroller {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #4cc9f0 #16213e;
+}
+
+.tracks-scroller::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tracks-scroller::-webkit-scrollbar-track {
+  background: #16213e;
+  border-radius: 10px;
+}
+
+.tracks-scroller::-webkit-scrollbar-thumb {
+  background-color: #4cc9f0;
+  border-radius: 10px;
+}
+
+.track-card {
+  flex: 0 0 200px;
+  width: 100px;
+  background: rgba(31, 58, 95, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(76, 201, 240, 0.1);
+}
+
+.track-card.expanded {
+  flex: 0 0 300px;
+  background: rgba(31, 58, 95, 0.6);
+}
+
+.track-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  cursor: pointer;
+  height: 160px;
+  width: 170px;
+}
+
+.track-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1f3a5f, #4cc9f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+}
+
+.play-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.track-image:hover .play-button {
+  opacity: 1;
+}
+
+.play-button svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.track-info {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.track-name {
+  color: white;
+  font-size: 1rem;
+  margin: 0 0 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-artist {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-controls {
+  margin-top: 15px;
+}
+
+.playlist-selector {
+  margin-bottom: 10px;
+}
+
+.playlist-select,
+.playlist-input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(76, 201, 240, 0.3);
+  background: rgba(20, 20, 40, 0.8);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+  margin-bottom: 8px;
+}
+
+.playlist-select:focus,
+.playlist-input:focus {
+  border-color: #4cc9f0;
+  box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.2);
+}
+
+.add-button {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #1f3a5f 0%, #4cc9f0 100%);
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-button:hover:not(.disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.add-button.disabled {
+  background: rgba(31, 58, 95, 0.6);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+}
+
+.added-to {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotify-embed {
+  width: 100%;
+  height: 80px;
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.spotify-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .s-header-content {
+  display: flex;
+  flex-direction: row;
+}
+.track-image{
+  width: 146px; 
+  height: 120px;
+}
+.header{
+  width: 80%;
+}
+.header-icon-wrapper{
+  display: none;
+}
+.track-item{
+  padding: 8px;
+}
+  .track-card {
+    flex: 0 0 180px;
+  }
+  
+  .track-card.expanded {
+    flex: 0 0 300px;
+  }
+  
+  .tracks-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .view-all-button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}

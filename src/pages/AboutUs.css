@@ -1,0 +1,341 @@
+
+.about-us-page {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  line-height: 1.6;
+}
+
+.a-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-section {
+  /* background: linear-gradient(135deg, #1a1a2e 0%, #16213e 30%, #1f3a5f 70%, #4cc9f0 100%); */
+  background-image: url('https://bandzoogle.com/files/2929/bz-blog-new-stock-images.jpg');
+    background-size: cover;
+  padding: 120px 0 80px;
+  text-align: center;
+z-index: -2;
+  position: relative;
+  overflow: hidden;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  z-index: -1; 
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  background: linear-gradient(to right, #fff, #4cc9f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-text{
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 30px auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.mission-section {
+  padding: 80px 0;
+  background-color: #0f172a;
+}
+
+.mission-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #4cc9f0;
+}
+
+.mission-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.mission-card {
+  background: rgba(31, 58, 95, 0.5);
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+  border: 1px solid rgba(76, 201, 240, 0.2);
+}
+
+.mission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(76, 201, 240, 0.2);
+}
+
+.mission-card .icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.mission-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #4cc9f0;
+}
+
+.team-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1f3a5f 0%, #16213e 100%);
+}
+
+.team-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.team-section .subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background: rgba(22, 33, 62, 0.7);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s;
+  border: 1px solid rgba(76, 201, 240, 0.2);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(76, 201, 240, 0.3);
+}
+
+.team-card .avatar {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.team-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.team-card .position {
+  color: #4cc9f0;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.team-card .bio {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.timeline-section {
+  padding: 80px 0;
+  background-color: #0f172a;
+}
+
+.timeline-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #4cc9f0;
+}
+
+.timeline-section .subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.timeline {
+  margin-left: 6px;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(to bottom, #1a1a2e, #4cc9f0);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  padding: 20px 0;
+  position: relative;
+}
+
+.timeline-year {
+  width: 120px;
+  background: #4cc9f0;
+  color: #0f172a;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  top: 20px;
+}
+
+.timeline-event {
+  width:40%;
+  padding: 20px;
+  background: rgba(31, 58, 95, 0.5);
+  border-radius: 10px;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-event {
+  margin-left: calc(50% + 60px);
+}
+
+.timeline-item:nth-child(even) .timeline-event {
+  margin-right: calc(50% + 60px);
+}
+
+.timeline-event::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #4cc9f0;
+  border-radius: 50%;
+  top: 30px;
+}
+
+.timeline-item:nth-child(odd) .timeline-event::after {
+  left: -30px;
+}
+
+.timeline-item:nth-child(even) .timeline-event::after {
+  right: -30px;
+}
+
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #1f3a5f 100%);
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.primary-button {
+  background: #4cc9f0;
+  color: #0f172a;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.primary-button:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+.secondary-button {
+  background: transparent;
+  color: #4cc9f0;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: 2px solid #4cc9f0;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.secondary-button:hover {
+  background: rgba(76, 201, 240, 0.1);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .timeline::before {
+    left: 30px;
+  }
+  .album-1 
+  {
+    display: none;
+  }
+  .album-2{
+    display: none;
+  }
+  
+  .timeline-year {
+    left: 30px;
+    margin-left: 0;
+  }
+  
+  .timeline-event {
+    width: calc(100% - 150px);
+    margin-left: 150px !important;
+  }
+  
+  .timeline-event::after {
+    left: -30px !important;
+    right: auto !important;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

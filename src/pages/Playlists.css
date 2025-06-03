@@ -1,0 +1,88 @@
+.playlists-container {
+  padding: 24px;
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.playlists-box {
+  background: #4cc9f0;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px #0001;
+}
+.playlist-h{
+   margin-bottom: 24px;
+   color: #16213e ;
+}
+.playlist-section {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 24px;
+}
+
+.playlist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playlist-title {
+  margin: 0;
+  color: #fff;
+}
+
+.delete-playlist-btn {
+  background: #f87171;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.no-playlists,
+.no-tracks {
+  color: #888;
+  margin-top: 8px;
+}
+
+.tracks-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.track-item {
+  margin-bottom: 18px;
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.track-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remove-track-btn {
+  background: #fbbf24;
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 16px;
+}
+
+.track-embed {
+  margin-top: 8px;
+  border-radius: 8px;
+}
+@media (max-width: 768px) {
+    .track-item {
+        padding: 8px;
+    }
+}
