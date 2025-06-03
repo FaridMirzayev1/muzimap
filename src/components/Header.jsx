@@ -21,7 +21,6 @@ const Header = () => {
       document.documentElement.style.overflow = "";
     }
 
-    // Təmizlik funksiyası
     return () => {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
